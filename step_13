@@ -13,7 +13,7 @@ class TestRegistration(unittest.TestCase):
         browser = self.browser
         browser.get(self.link)
 
-        # Ваш код, который заполняет обязательные поля
+        # Заполняем обязательные поля
         input1 = browser.find_element(By.XPATH, '/html/body/div/form/div[1]/div[1]/input')
         input1.send_keys("Ivan")
         input2 = browser.find_element(By.XPATH, '/html/body/div/form/div[1]/div[2]/input')
@@ -29,8 +29,7 @@ class TestRegistration(unittest.TestCase):
         button = browser.find_element(By.XPATH, '/html/body/div/form/button')
         button.click()
 
-        # Проверяем, что смогли зарегистрироваться
-        # ждем загрузки страницы
+        
         time.sleep(1)
 
         # находим элемент, содержащий текст
@@ -61,7 +60,7 @@ class TestRegistration(unittest.TestCase):
         button = browser.find_element(By.XPATH, '/html/body/div/form/button')
         button.click()
 
-        # Проверяем, что не смогли зарегистрироваться
+        # Проверяем, что смогли зарегистрироваться
         # ждем загрузки страницы
         time.sleep(1)
 
