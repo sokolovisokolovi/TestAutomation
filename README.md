@@ -33,4 +33,13 @@
     py.test -m slowest  # отменить тесты с помощью декоратора @pytest.mark.lowest или slowest медленнее всего = pytest.mark.slowest; @slowest
     py.test --traceconfig  # узнайте, какие плагины py.test активны в вашей среде.
     py.test --instafail  # если установлен pytest-instafail, показывайте ошибки и сбои мгновенно, вместо того, чтобы ждать окончания набора тестов.
+    
+3. Маркировка тестов.
+    @pytest.mark.smoke #запускаем только смок тесты
+    @pytest.mark.win10 #запускаем тесты для вин 10
+    @pytest.mark.skip  #пропустить тест
+    @pytest.mark.xfail #Отметить тест как падающий (xfail можно добавлять параметр reason) Запуск(pytest -rx -v name_file.py)
+    
+    
+    
 
