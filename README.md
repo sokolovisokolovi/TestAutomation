@@ -43,17 +43,20 @@
     
     #запуск тестов с разными маркерами
     @pytest.mark.smoke
-    @pytest.mark.regression : pytest -s -v -m "smoke or regression" test_fixture.py
+    @pytest.mark.regression : pytest -s -v -m "smoke or regression" name_file.py
 
     #Запуск нескольких маркеровок
     @pytest.mark.smoke
-    @pytest.mark.win10 : pytest -s -v -m "smoke and win10" test_fixture.py
+    @pytest.mark.win10 : pytest -s -v -m "smoke and win10" name_file.py
 
     #пропуск некольких тестов
-    @pytest.mark.skip : pytest -s -v  test_fixture.py
+    @pytest.mark.skip : pytest -s -v  name_file.py
     
     #написать тест ожидаемо падающий
-    @pytest.mark.xfail : pytest -rx -v test_fixture.py
+    @pytest.mark.xfail : pytest -rx -v name_file.py
+    
+    #параметны на тест
+    @pytest.mark.parametrize()   pytest -s -v  name_file.py
 
     
     
