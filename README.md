@@ -56,7 +56,7 @@
     @pytest.mark.xfail : pytest -rx -v name_file.py
     
     #параметны на тест
-    @pytest.mark.parametrize()   pytest -s -v  name_file.py
+    @pytest.mark.parametrize()   pytest -s -v  name_file.py  (пример:  link = f"http://selenium1py.pythonanywhere.com/{language}/")
 
     
     
